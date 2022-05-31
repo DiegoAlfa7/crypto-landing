@@ -32,7 +32,7 @@
       </b-jumbotron>
     </div>
 
-    <div class="screen mx-2 my-5">
+    <div class="screen mx-5">
       <div class="screen-header">
       </div>
       <div class="screen-body">
@@ -40,18 +40,28 @@
           <div class="app-title mb-5">
             <span class="display-3" style="font-weight: 600;">{{ page.title }}</span>
           </div>
-          <div class="a_row" v-for="m in Object.keys(contact.rss)" :key="m">
-            <div style="display: flex; justify-content: space-evenly; margin-bottom: 15px;">
-              <div style="flex-grow: 1;" class="media-left">
-                <b-icon style="width:1.5em; height:1.5em; color:white" :icon="m"></b-icon>
-              </div>
-              <div style="flex-grow: 1;">
-                <p style="font-size: medium; color: white; font-weight: bold;" class="media-heading">{{ contact.rss[m]
-                }}
-                </p>
-              </div>
-            </div>
-          </div>
+          <b-container fluid>
+            <b-row>
+              <b-col cols="12" sm="2">
+                <b-img fluid center :src="getImgFromAssets(web.logo)" width="100" />
+              </b-col>
+              <b-col cols="12" sm="10" class="mt-3">
+                <div class="a_row" v-for="m in Object.keys(contact.rss)" :key="m">
+                  <div style="display: flex; justify-content: space-evenly; margin-bottom: 15px;">
+                    <div style="flex-grow: 1;" class="media-left">
+                      <b-icon style="width:1.5em; height:1.5em; color:white" :icon="m"></b-icon>
+                    </div>
+                    <div style="flex-grow: 1;">
+                      <p style="font-size: medium; color: white; font-weight: bold;" class="media-heading">{{
+                          contact.rss[m]
+                      }}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </b-col>
+            </b-row>
+          </b-container>
         </div>
         <div class="screen-body-item">
           <div class="app-form">
@@ -120,7 +130,7 @@ export default {
     const contact = WEB.contactInfo
     const page = WEB.pages[currentPage];
 
-    return { currentPage, page, contact }
+    return { currentPage, page, contact, web: WEB }
   },
   methods: {
     getImgFromAssets(img) {
@@ -163,9 +173,7 @@ li {
   margin: 0 10px;
 }
 
-a {
-  color: #42b983;
-}
+
 
 *,
 *:before,
@@ -183,7 +191,6 @@ body {
 body,
 button,
 input {
-  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   letter-spacing: 1.4px;
 }
@@ -207,7 +214,7 @@ input {
 
 .screen {
 
-  box-shadow: 0 1px 8px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 
 }
 
@@ -315,7 +322,7 @@ input {
   background: none;
   border: none;
   border-bottom: 1px solid var(--secondary);
-  color: #ddd;
+  color: white;
   font-size: 14px;
   text-transform: uppercase;
   outline: none;
