@@ -17,9 +17,11 @@
       </b-collapse>
     </b-navbar>
 
-    <div class="mb">
+    <div class="pt-5">
       <router-view></router-view>
     </div>
+
+
 
   </div>
 </template>
