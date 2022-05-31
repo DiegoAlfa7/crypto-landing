@@ -8,3 +8,28 @@
 .item {
     margin-bottom: 100pt;
 }
+
+.content-text {
+
+  line-height: 40px;
+  font-size: 25px;
+
+}
+
+
+#jumbotron {
+  animation: fadeInLoad 1s;
+}
+
+#course {
+  animation: fadeInLoad 1.5s;
+}
+
+@keyframes fadeInLoad {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}

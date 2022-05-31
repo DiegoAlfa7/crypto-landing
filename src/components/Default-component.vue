@@ -3,103 +3,70 @@
   <b-container fluid>
 
 
+    <!-- Title and Content -->
+    <div id="jumbotron">
+      <b-jumbotron fluid style="border-width: 1px; border-color: black;" class="mb-3">
+        <b-row>
 
-    <!-- <b-row>
-      <b-col>
-        <h1 class="my-3">{{ page.title }}</h1>
-      </b-col>
-    </b-row> -->
+          <b-col cols="12" sm="12" md="10" class=".text-truncate">
+            <div class="my-5">
+              <h1 class="display-1">{{ page.title }}</h1>
+            </div>
+            <p class="mb-2 content-text">{{ page.content ? page.content.charAt(0).toUpperCase() +
+                page.content.slice(1).toLowerCase()
+                : ''
+            }}</p>
+          </b-col>
+          <b-col cols="12" md="2" style="justify-content: center; display: flex;">
 
-    <!-- Title -->
-    <!-- <b-row style="margin-bottom: 10%; margin-top:10px">
+            <div>
+              <b-img fluid-grow center v-if="page.logo" :src="getImgFromAssets(page.logo)" :alt="page.title" />
+            </div>
 
-       <b-card style="margin-bottom : 10%" border-variant="light" :img-src="getImgPath(page.logo)" :img-alt="page.title" img-right>
-      <b-card-text style="align: left;">
-        {{page.title}}
-      </b-card-text>
-    </b-card>
-
-                        <div class="col-md-6" style="position: relative; min-height: 150px;">
-                            <h2 style="position: absolute; bottom: 0;">{{page.title}}</h2>
-                        </div>
-
-    </b-row> -->
-    <!-- Content -->
-
-    <div>
-      <div v-if="page.logo" class="col-12 how-img">
-        <img :src="getImgFromAssets(page.logo)" :alt="page.title" />
-      </div>
-      <b-jumbotron fluid :header="page.title" :lead="page.content ? page.content.charAt(0).toUpperCase() + page.content.slice(1) : ''">
+          </b-col>
+        </b-row>
 
       </b-jumbotron>
     </div>
 
-    <b-row v-if="page.content">
-      <b-col>
-        <b-card style=" align-items:center; background-color: var(--secondary)">
-          <b-card-text class="text-center text-white">{{ page.content }}</b-card-text>
-        </b-card>
-      </b-col>
-    </b-row>
-
-
     <!-- ITEMS -->
-    <b-row>
-      <b-col cols="12" md="6" v-for="course in page.items" :key="course.title">
-
-
-        <div class="h-100 p-2">
-          <div style="background-color: var(--primary)"
-            class="h-100  pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
-            <div class="my-3 py-3">
-              <h2 class="display-5">{{ course.title }}</h2>
+    <b-row id="items">
+      <b-col cols="12" md="6" v-for="(course, index) in page.items" :key="course.title">
+        <div class="h-100 py-2">
+          <div id="course"
+            v-bind:style="{ backgroundColor: index % 3 == 0 ? 'var(--primary)' : index % 3 == 1 ? 'var(--secondary)' : 'var(--primary-light)' }"
+            style="height: 500px; border-radius: 10px;"
+            class="d-flex flex-column text-center text-white overflow-hidden shadow">
+            <div class="px-3 py-3">
+              <h4 class="display-7 my-4" style="font-weight: bold;">{{ course.title }}</h4>
               <p class="lead">{{ course.description }}</p>
             </div>
-            <!-- <div class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0; overflow: hidden;"> -->
-            <b-img fluid-grow center :src="course.picture"
-              style=" height: 300px;  border-radius: 21px 21px 0 0; overflow: hidden;" />
+            <div class=" h-100 pt-3 d-flex flex-column-reverse">
+              <div class="bg-light shadow-sm mx-auto"
+                style="width: 85%; border-radius: 21px 21px 0 0; overflow: hidden;">
+
+                <b-img fluid-grow center :src="course.picture" />
+
+              </div>
+            </div>
+
+
+
+            <!-- <b-img fluid-grow center :src="course.picture"
+              style=" height: 300px;  border-radius: 21px 21px 0 0; overflow: hidden;" /> -->
             <!-- </div> -->
           </div>
         </div>
-        <!-- <b-card no-body class="overflow-hidden" >
-          <b-row no-gutters>
-            <b-col md="6">
-              <b-card-img :src="course.picture" :alt="course.title" class="rounded-0"></b-card-img>
-            </b-col>
-            <b-col md="6">
-              <b-card-body :title="course.title">
-                <b-card-text>
-                  {{course.description}}
-                </b-card-text>
-              </b-card-body>
-            </b-col>
-          </b-row>
-        </b-card> -->
-
-        <!-- <b-card :title="course.title" :img-src="course.picture" img-alt="Image" img-top tag="article"
-          class="mb-2 ">
-          <b-card-text class="py-5">
-            {{ course.description }}
-          </b-card-text>
-
-         <b-button href="#" variant="primary">Go somewhere</b-button>
-        </b-card> -->
       </b-col>
-
     </b-row>
-
-
 
     <b-row v-if="page.bottomText">
       <b-col>
-        <b-card class="text-center">
-          <div class="bg-secondary text-light">{{ page.bottomText }}</div>
+        <b-card class="text-center my-5">
+          <div class="text-dark">{{ page.bottomText }}</div>
         </b-card>
-
       </b-col>
     </b-row>
-
 
   </b-container>
 
