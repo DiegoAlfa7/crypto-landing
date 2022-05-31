@@ -1,7 +1,7 @@
 {
-  "landingTitle": "CryptoWorld University",
-  "landingSubtitle": "Tú eres tu mejor inversión",
-  "landingLogo": "/assets/logo.png",
+  "title": "CryptoWorld University",
+  "subtitle": "Tú eres tu mejor inversión",
+  "logo": "cryptoworld.png",
   "colors": {
     "primary": "#32c6c8",
     "primary-light": "#93dad4",
@@ -17,7 +17,7 @@
   "pages": {
     "About us": {
       "title": "Acerca de nosotros",
-      "logo": "aboutUs",
+      "logo": "aboutUs.png",
       "content": "SOMOS UN EQUIPO DE PROFESIONALES QUE DESDE HACE APROXIMADAMENTE 9 AÑOS, TRABAJAMOS EN ESTE APASIONANTE MUNDO DE LAS CRIPTOMONEDAS, AL PURO ESTILO DE UNA HERMANDAD UNIVERSITARIA, EMPODERANDO ANUESTROS USUARIOS. Y SIN DUDA, APOSTAMOS POR UNA ADOPCIÓN MASIVA DE LAS CRIPTOMONEDAS EN NUESTRO DÍA A DÍA. HEMOS CREADO 8 CURSOS CONDIFERENTES NIVELES Y OBJETIVOS, DESDE ¿CÓMO ADQUIRIR MIS PRIMERAS CRIPTOS? (QUE CONSIDERAMOS UN NIVEL BÁSICO HASTA UN NIVEL AVANZADO (100 HORAS DE FORMACIÓN + 6 MESESDE SEGUIMIENTO) PARA CONVERTIRTE EN UN PROFESIONAL VERDADERO."
     },
     "Contact": {
@@ -27,7 +27,7 @@
     },
     "Courses": {
       "title": "Nuestros Cursos",
-      "logo": "courses",
+      "logo": "courses.png",
       "items": [
         {
           "order": 1,

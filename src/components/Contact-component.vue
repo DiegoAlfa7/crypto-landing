@@ -6,7 +6,7 @@
       We care a lot about what you think. Seriously. No joke... , ok maybe not giving a shit but the intent is what matters, anyway contact form under this.
     </p>
 
-    <b-form>
+    <!-- <b-form>
 
       <b-form-group label="Your Name:" label-for="name">
         <b-form-input id="name" v-model="name" required />
@@ -34,7 +34,7 @@
 
       <b-button type="submit" variant="primary">Submit</b-button>
 
-    </b-form>
+    </b-form> -->
   </div>
 </template>
 

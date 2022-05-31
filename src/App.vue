@@ -16,20 +16,32 @@
   </div>
 </nav> -->
 
-    <nav class="site-header sticky-top py-1">
+    <!-- <nav class="site-header sticky-top py-1">
       <div class="container d-flex flex-column flex-md-row justify-content-between">
-        <!-- <b-nav>
+       <b-button variant="outline-info" :to="'/'">
 
-          <b-nav-item :to="'/' + p" class="py-2 d-none d-md-inline-block" v-for="p in Object.keys(web.pages)" :key="p">{{ p }}
-          </b-nav-item>
-        </b-nav> -->
-        <!-- <router-link class="py-2 d-none d-md-inline-block" :to="'/'" >{{web.landingTitle}}</router-link> -->
-        <!-- <router-link class="py-2 d-none d-md-inline-block" :to="'/' + p" v-for="p in Object.keys(web.pages)" :key="p">{{ p }}</router-link> -->
-        <b-button variant="outline-info" :to="'/'">{{web.landingTitle}}</b-button>
+          <img :src="web.landingLogo" :alt="web.title" />
+
+        </b-button>
+
         <b-button variant="outline-info" :to="'/' + p" v-for="p in Object.keys(web.pages)" :key="p">{{ p }}</b-button>
 
       </div>
-    </nav>
+    </nav> -->
+
+    <b-navbar toggleable="lg" type="dark" variant="info">
+      <b-navbar-brand href="#" style="margin-left: 30px" >
+        <img :src="getImgFromAssets(web.logo)" width="60" />
+      </b-navbar-brand>
+
+      <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+
+      <b-collapse id="nav-collapse" is-nav>
+        <b-navbar-nav>
+          <b-nav-item :to="'/' + p" v-for="p in Object.keys(web.pages)" :key="p">{{ p }}</b-nav-item>
+        </b-navbar-nav>
+      </b-collapse>
+    </b-navbar>
 
     <div class="mt-5 p-3 p-md-5 m-md-3">
       <router-view></router-view>
@@ -46,6 +58,12 @@ import WEB from '@/assets/page-definition.json';
 export default {
   data: function () {
     return { web: WEB }
+  },
+  methods: {
+    getImgFromAssets(img) {
+      var images = require.context('./assets/', false, /\.(gif|jpe?g|tiff?|png|webp|bmp)$/i)
+      return images('./' + img )
+    }
   }
 }
 </script>
@@ -54,4 +72,4 @@ export default {
 #app {
   margin: 20px;
 }
-</style>
+</>

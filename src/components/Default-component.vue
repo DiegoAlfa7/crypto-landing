@@ -1,15 +1,6 @@
  /* eslint-disable */
 <template>
-
-  <!-- <h1>{{page ? page.title : 'No hay pagina'}}</h1> -->
-  <!-- <h1>{{$route.name}}</h1> -->
-
-  <!-- <b-container class="bv-example-row">
-      <b-row>
-        <b-col> -->
-
-
-  <b-container>
+  <b-container fluid>
 
 
 
@@ -20,48 +11,57 @@
     </b-row> -->
 
     <!-- Title -->
-    <b-row style="margin-bottom: 10%; margin-top:10px">
-     
-        <!-- <b-card style="margin-bottom : 10%" border-variant="light" :img-src="getImgPath(page.logo)" :img-alt="page.title" img-right>
+    <!-- <b-row style="margin-bottom: 10%; margin-top:10px">
+
+       <b-card style="margin-bottom : 10%" border-variant="light" :img-src="getImgPath(page.logo)" :img-alt="page.title" img-right>
       <b-card-text style="align: left;">
         {{page.title}}
       </b-card-text>
-    </b-card> -->
-     
+    </b-card>
+
                         <div class="col-md-6" style="position: relative; min-height: 150px;">
                             <h2 style="position: absolute; bottom: 0;">{{page.title}}</h2>
                         </div>
-                        <div v-if="page.logo" class="col-md-6 how-img" >
-                            <img :src="getImgFromAssets(page.logo)" :alt="page.title" />
-                        </div>
-    </b-row>
-<!-- Content -->
+
+    </b-row> -->
+    <!-- Content -->
+
+    <div>
+      <div v-if="page.logo" class="col-12 how-img">
+        <img :src="getImgFromAssets(page.logo)" :alt="page.title" />
+      </div>
+      <b-jumbotron fluid :header="page.title" :lead="page.content ? page.content.charAt(0).toUpperCase() + page.content.slice(1) : ''">
+
+      </b-jumbotron>
+    </div>
 
     <b-row v-if="page.content">
       <b-col>
-         <b-card style=" align-items:center; background-color: var(--secondary)">
-        <b-card-text class="text-center text-white">{{page.content}}</b-card-text>
-      </b-card>
+        <b-card style=" align-items:center; background-color: var(--secondary)">
+          <b-card-text class="text-center text-white">{{ page.content }}</b-card-text>
+        </b-card>
       </b-col>
     </b-row>
 
-    
-<!-- ITEMS -->
+
+    <!-- ITEMS -->
     <b-row>
       <b-col cols="12" md="6" v-for="course in page.items" :key="course.title">
 
-    
-    <div class="h-100 p-2">
-      <div style="background-color: var(--primary)" class="h-100  pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
-        <div class="my-3 py-3">
-          <h2 class="display-5">{{course.title}}</h2>
-          <p class="lead">{{course.description}}</p>
+
+        <div class="h-100 p-2">
+          <div style="background-color: var(--primary)"
+            class="h-100  pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+            <div class="my-3 py-3">
+              <h2 class="display-5">{{ course.title }}</h2>
+              <p class="lead">{{ course.description }}</p>
+            </div>
+            <!-- <div class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0; overflow: hidden;"> -->
+            <b-img fluid-grow center :src="course.picture"
+              style=" height: 300px;  border-radius: 21px 21px 0 0; overflow: hidden;" />
+            <!-- </div> -->
+          </div>
         </div>
-        <!-- <div class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0; overflow: hidden;"> -->
-        <b-img fluid-grow center :src="course.picture" style=" height: 300px;  border-radius: 21px 21px 0 0; overflow: hidden;"/>
-        <!-- </div> -->
-      </div>
-    </div>
         <!-- <b-card no-body class="overflow-hidden" >
           <b-row no-gutters>
             <b-col md="6">
@@ -93,9 +93,9 @@
 
     <b-row v-if="page.bottomText">
       <b-col>
-  <b-card class="text-center">
-    <div class="bg-secondary text-light">{{ page.bottomText }}</div>
-  </b-card>
+        <b-card class="text-center">
+          <div class="bg-secondary text-light">{{ page.bottomText }}</div>
+        </b-card>
 
       </b-col>
     </b-row>
@@ -124,13 +124,13 @@ export default {
 
     const page = WEB.pages[currentPage];
 
-    return { currentPage, page}
+    return { currentPage, page }
   },
-  methods:{
+  methods: {
     getImgFromAssets(img) {
-    var images = require.context('../assets/', false, /\.png$/)
-    return images('./' + img + ".png")
-  }
+      var images = require.context('../assets/', false, /\.(gif|jpe?g|tiff?|png|webp|bmp)$/i)
+      return images('./' + img)
+    }
   }
 }
 
