@@ -20,7 +20,7 @@ import WEB from '@/assets/page-definition.json';
 Vue.use(VueRouter)
 
 const pageKeys = Object.keys(WEB.pages);
-const pages = pageKeys.map(p => ({ path: '/' + p, name: p, component: p == 'contact' ? Contact  : {...Default} }))
+const pages = pageKeys.map(p => ({ path: '/' + p, name: p, component: p == 'Contact' ? Contact  : {...Default} }))
 pages.push({
   path: "/:catchAll(.*)",
   component: NotFound,

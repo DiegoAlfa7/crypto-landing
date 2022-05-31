@@ -3,7 +3,7 @@
   <div>
     <h1>Courses</h1>
     <p>
-      A lot of couses
+      A lot of courses
     </p>
   </div>
 </template>

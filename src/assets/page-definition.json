@@ -15,20 +15,19 @@
     }
   },
   "pages": {
-    "about-us": {
+    "About us": {
       "title": "Acerca de nosotros",
-      "logo": "/assets/logo-about-us.png",
-      "content": "Somos un equipo de profesionales que desde hace aproximadamente 9 años, trabajamos en este apasionante mundo de las Criptomonedas, Al puro estilo de una hermandad universitaria, empoderando anuestros usuarios. Y SIN DUDA, apostamos por una adopción masiva de las criptomonedas en nuestro día a día. Hemos creado 8 cursos condiferentes niveles y objetivos, desde ¿cómo adquirir mis primeras criptos? (que consideramos un nivel básico hasta un nivel avanzado (100 horas de formación + 6 mesesde seguimiento) para convertirte en un profesional verdadero."
+      "logo": "aboutUs",
+      "content": "SOMOS UN EQUIPO DE PROFESIONALES QUE DESDE HACE APROXIMADAMENTE 9 AÑOS, TRABAJAMOS EN ESTE APASIONANTE MUNDO DE LAS CRIPTOMONEDAS, AL PURO ESTILO DE UNA HERMANDAD UNIVERSITARIA, EMPODERANDO ANUESTROS USUARIOS. Y SIN DUDA, APOSTAMOS POR UNA ADOPCIÓN MASIVA DE LAS CRIPTOMONEDAS EN NUESTRO DÍA A DÍA. HEMOS CREADO 8 CURSOS CONDIFERENTES NIVELES Y OBJETIVOS, DESDE ¿CÓMO ADQUIRIR MIS PRIMERAS CRIPTOS? (QUE CONSIDERAMOS UN NIVEL BÁSICO HASTA UN NIVEL AVANZADO (100 HORAS DE FORMACIÓN + 6 MESESDE SEGUIMIENTO) PARA CONVERTIRTE EN UN PROFESIONAL VERDADERO."
     },
-    "contact": {
+    "Contact": {
       "title": "Contacto",
       "logo": "/assets/logo-about-us.png",
       "form": true
     },
-    "courses": {
+    "Courses": {
       "title": "Nuestros Cursos",
-      "logo": "/assets/logo-courses.png",
-      "content": "Estos son nuestros cursos",
+      "logo": "courses",
       "items": [
         {
           "order": 1,

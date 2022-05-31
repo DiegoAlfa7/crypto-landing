@@ -23,8 +23,10 @@
           <b-nav-item :to="'/' + p" class="py-2 d-none d-md-inline-block" v-for="p in Object.keys(web.pages)" :key="p">{{ p }}
           </b-nav-item>
         </b-nav> -->
-        <router-link class="py-2 d-none d-md-inline-block" :to="'/'" >{{web.landingTitle}}</router-link>
-        <router-link class="py-2 d-none d-md-inline-block" :to="'/' + p" v-for="p in Object.keys(web.pages)" :key="p">{{ p }}</router-link>
+        <!-- <router-link class="py-2 d-none d-md-inline-block" :to="'/'" >{{web.landingTitle}}</router-link> -->
+        <!-- <router-link class="py-2 d-none d-md-inline-block" :to="'/' + p" v-for="p in Object.keys(web.pages)" :key="p">{{ p }}</router-link> -->
+        <b-button variant="outline-info" :to="'/'">{{web.landingTitle}}</b-button>
+        <b-button variant="outline-info" :to="'/' + p" v-for="p in Object.keys(web.pages)" :key="p">{{ p }}</b-button>
 
       </div>
     </nav>
