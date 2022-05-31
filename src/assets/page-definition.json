@@ -1,0 +1,93 @@
+{
+  "landingTitle": "CryptoWorld University",
+  "landingSubtitle": "Tú eres tu mejor inversión",
+  "landingLogo": "/assets/logo.png",
+  "colors": {
+    "primary": "#32c6c8",
+    "primary-light": "#93dad4",
+    "secondary": "#989792"
+  },
+  "contactInfo": {
+    "rss": {
+      "instagram": "@cryptoworlduniversity",
+      "whatsapp": "+34 630 104 538",
+      "mail": "hola@cryptoworlduniversity.es"
+    }
+  },
+  "pages": {
+    "about-us": {
+      "title": "Acerca de nosotros",
+      "logo": "/assets/logo-about-us.png",
+      "content": "Somos un equipo de profesionales que desde hace aproximadamente 9 años, trabajamos en este apasionante mundo de las Criptomonedas, Al puro estilo de una hermandad universitaria, empoderando anuestros usuarios. Y SIN DUDA, apostamos por una adopción masiva de las criptomonedas en nuestro día a día. Hemos creado 8 cursos condiferentes niveles y objetivos, desde ¿cómo adquirir mis primeras criptos? (que consideramos un nivel básico hasta un nivel avanzado (100 horas de formación + 6 mesesde seguimiento) para convertirte en un profesional verdadero."
+    },
+    "contact": {
+      "title": "Contacto",
+      "logo": "/assets/logo-about-us.png",
+      "form": true
+    },
+    "courses": {
+      "title": "Nuestros Cursos",
+      "logo": "/assets/logo-courses.png",
+      "content": "Estos son nuestros cursos",
+      "items": [
+        {
+          "order": 1,
+          "picture": "https://images.unsplash.com/photo-1638913658828-afb88c3d4d11?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+          "title": "Iniciación al mundo Crypto",
+          "duration": "4 horas",
+          "description": "Junto a los conceptos básicos necesarios aprenderemos que son las Cryptomonedas y de dónde vienen."
+        },
+        {
+          "order": 2,
+          "picture": "https://images.unsplash.com/photo-1638913662529-1d2f1eb5b526?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+          "title": "Adquiriendo mis primeras Cryptomonedas",
+          "duration": "2 horas",
+          "description": "Para usuarios que ya tienen una base o alumnos del anterior nivel, aprenderemos tipos de wallets, Exchanges y Adquiriréis vuestras primeras Cryptomonedas."
+        },
+        {
+          "order": 3,
+          "picture": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+          "title": "Profundizando en el ecosistema Crypto",
+          "duration": "6 horas",
+          "description": "Metaverso, web 3.0, minería, proof of stake, etc. Con este módulo de 6 horas veremos todos los conceptos y tecnologías que rodean el nuevo mundo que se está construyendo en el ecosistema."
+        },
+        {
+          "order": 4,
+          "picture": "https://blog.bitnovo.com/wp-content/uploads/2021/02/estas-son-las-principales-plataformas-defi_1.jpg",
+          "title": "Iniciación a las DeFI",
+          "duration": "4 horas",
+          "description": "Todos los avances y tecnologías que la economía y viceversa aportan a las finanzas descentralizadas."
+        },
+        {
+          "order": 5,
+          "picture": "https://thedalesreport.com/wp-content/uploads/2020/01/Q4-750x430.jpg",
+          "title": "Resultados con las DeFI",
+          "duration": "6 horas",
+          "description": "Yield farming, staking, Impermanent Loss… Es posible generar dinero, pero primero tienes que tener los conocimientos iniciales para no fallar en el camino de las Defi."
+        },
+        {
+          "order": 6,
+          "picture": "https://images.unsplash.com/photo-1643101809652-ef56a14818ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+          "title": "Iniciación a los NFT",
+          "duration": "4 horas",
+          "description": "¿Qué es un token no fungible? A que se debe el boom de los NFT, casos de uso y minteado de tu primer NFT."
+        },
+        {
+          "order": 7,
+          "picture": "https://images.unsplash.com/photo-1642525027649-00d7397a6d4a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+          "title": "Resultados con NFT",
+          "duration": "6 horas",
+          "description": "comprar y vender NFT’s, analizar bien los flujos de compra/venta para poder aprovechar la propia especulación en vuestro beneficio."
+        },
+        {
+          "order": 8,
+          "picture": "https://images.unsplash.com/photo-1559526324-593bc073d938?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+          "title": "Análisis PRO",
+          "duration": "100 horas",
+          "description": "Análisis de proyectos, análisis técnico, análisis de riesgo, principios elementales de estadística... te damos todas las herramientas necesarias para ser un buen Trader profesional."
+        }
+      ],
+      "bottomText": "EN TODOS LOS CURSOS, AL FINALIZAR, SI SE HA SUPERADO LAS EVALUACIONES, SE OBTENDRÁ UN DIPLOMA EN NFT Y UN NFT DE REGALO. ADEMÁS, TODOS LOS ALUMNOS DEL CURSO PRO TENDRÁN 6 MESES DE SEGUIMIENTO Y SOPORTE PARA LO QUE PUEDAN NECESITAR."
+    }
+  }
+}

@@ -1,0 +1,10 @@
+:root {
+  --secondary: #989792;
+  --primary: #32c6c8;
+  --primary-light: #93dad4;
+  --white: #ffffff;
+}
+
+.item {
+    margin-bottom: 100pt;
+}
