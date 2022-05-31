@@ -7,7 +7,7 @@
                 <h1 class="display-4 mb-5 font-weight-normal">{{ web.title }}</h1>
                 <h1 class="display-6 my-2 font-weight-normal">{{ web.subtitle }}</h1>
                 <p class="lead font-weight-normal">{{web.headline}}</p>
-                <a class="btn btn-outline-secondary" href="#">{{web.actionTitle}}</a>
+                <button class="btn btn-outline-secondary" @click="$router.push('about-us')">{{web.actionTitle}}</button>
             </div>
             <div class="product-device shadow-sm d-none d-md-block"></div>
             <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>

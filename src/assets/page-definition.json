@@ -22,14 +22,10 @@
       "logo": "aboutUs.png",
       "content": "SOMOS UN EQUIPO DE PROFESIONALES QUE DESDE HACE APROXIMADAMENTE 9 AÑOS, TRABAJAMOS EN ESTE APASIONANTE MUNDO DE LAS CRIPTOMONEDAS, AL PURO ESTILO DE UNA HERMANDAD UNIVERSITARIA, EMPODERANDO ANUESTROS USUARIOS. Y SIN DUDA, APOSTAMOS POR UNA ADOPCIÓN MASIVA DE LAS CRIPTOMONEDAS EN NUESTRO DÍA A DÍA. HEMOS CREADO 8 CURSOS CONDIFERENTES NIVELES Y OBJETIVOS, DESDE ¿CÓMO ADQUIRIR MIS PRIMERAS CRIPTOS? (QUE CONSIDERAMOS UN NIVEL BÁSICO HASTA UN NIVEL AVANZADO (100 HORAS DE FORMACIÓN + 6 MESESDE SEGUIMIENTO) PARA CONVERTIRTE EN UN PROFESIONAL VERDADERO."
     },
-    "contact": {
-      "title": "Contacto",
-      "logo": "/assets/logo-about-us.png",
-      "form": true
-    },
     "courses": {
       "title": "Nuestros Cursos",
       "content":"Echale un vistazo a nuestro catálogo de cursos.",
+      "logo": "courses.png",
       "items": [
         {
           "order": 1,
@@ -89,6 +85,11 @@
         }
       ],
       "bottomText": "EN TODOS LOS CURSOS, AL FINALIZAR, SI SE HA SUPERADO LAS EVALUACIONES, SE OBTENDRÁ UN DIPLOMA EN NFT Y UN NFT DE REGALO. ADEMÁS, TODOS LOS ALUMNOS DEL CURSO PRO TENDRÁN 6 MESES DE SEGUIMIENTO Y SOPORTE PARA LO QUE PUEDAN NECESITAR."
+    },
+    "contact": {
+      "title": "Contacto",
+      "content": "Estaremos encantados de resolver todas tus preguntas desde nuestros distintos canales de contacto",
+      "form": true
     }
   }
 }

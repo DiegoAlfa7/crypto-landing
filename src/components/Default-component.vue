@@ -8,21 +8,24 @@
       <b-jumbotron fluid style="border-width: 1px; border-color: black;" class="mb-3">
         <b-row>
 
-          <b-col cols="12" sm="12" md="10" class=".text-truncate">
-            <div class="my-5">
-              <h1 class="display-1">{{ page.title }}</h1>
-            </div>
-            <p class="mb-2 content-text">{{ page.content ? page.content.charAt(0).toUpperCase() +
-                page.content.slice(1).toLowerCase()
-                : ''
-            }}</p>
-          </b-col>
-          <b-col cols="12" md="2" style="justify-content: center; display: flex;">
+          <b-col cols="12" class=".text-truncate">
+            <b-row class="mb-5">
+              <b-col cols="8">
+                <h1 class="display-1">{{ page.title }}</h1>
+              </b-col>
 
-            <div>
-              <b-img fluid-grow center v-if="page.logo" :src="getImgFromAssets(page.logo)" :alt="page.title" />
-            </div>
-
+              <b-col cols="4">
+                <b-img style="width: 120px" fluid center v-if="page.logo" :src="getImgFromAssets(page.logo)" :alt="page.title" />
+              </b-col>
+            </b-row>
+            <b-row>
+              <b-col>
+                <p class="mb-2 content-text">{{ page.content ? page.content.charAt(0).toUpperCase() +
+                    page.content.slice(1).toLowerCase()
+                    : ''
+                }}</p>
+              </b-col>
+            </b-row>
           </b-col>
         </b-row>
 

@@ -1,40 +1,72 @@
 /* eslint-disable */
 <template>
-  <div>
-        <h3></h3>
-    <div class="screen">
+  <div class="pb-5">
+    <!-- Title and Content -->
+    <!-- Title and Content -->
+    <div id="jumbotron">
+      <b-jumbotron fluid style="border-width: 1px; border-color: black;" class="mb-3">
+        <b-row>
+
+          <b-col cols="12" class=".text-truncate">
+            <b-row class="mb-5">
+              <b-col cols="8">
+                <h1 class="display-1">{{ page.title }}</h1>
+              </b-col>
+
+              <b-col cols="4">
+                <b-img style="width: 120px" fluid center v-if="page.logo" :src="getImgFromAssets(page.logo)"
+                  :alt="page.title" />
+              </b-col>
+            </b-row>
+            <b-row>
+              <b-col>
+                <p class="mb-2 content-text">{{ page.content ? page.content.charAt(0).toUpperCase() +
+                    page.content.slice(1).toLowerCase()
+                    : ''
+                }}</p>
+              </b-col>
+            </b-row>
+          </b-col>
+        </b-row>
+
+      </b-jumbotron>
+    </div>
+
+    <div class="screen mx-2 my-5">
       <div class="screen-header">
       </div>
       <div class="screen-body">
         <div class="screen-body-item left">
           <div class="app-title mb-5">
-            <span>{{page.title}}</span>
+            <span class="display-3" style="font-weight: 600;">{{ page.title }}</span>
           </div>
-          <div class="a_row" v-for="m in Object.keys(contact.rss)" :key="m" >
-            <div style="display: flex; justify-content: space-evenly; margin-bottom: 15px;" >
+          <div class="a_row" v-for="m in Object.keys(contact.rss)" :key="m">
+            <div style="display: flex; justify-content: space-evenly; margin-bottom: 15px;">
               <div style="flex-grow: 1;" class="media-left">
-                   <b-icon style="width:1.5em; height:1.5em; color:white" :icon="m"></b-icon>
+                <b-icon style="width:1.5em; height:1.5em; color:white" :icon="m"></b-icon>
               </div>
               <div style="flex-grow: 1;">
-                <p style="font-size: medium; color: white; font-weight: bold;" class="media-heading">{{contact.rss[m]}}</p>
+                <p style="font-size: medium; color: white; font-weight: bold;" class="media-heading">{{ contact.rss[m]
+                }}
+                </p>
               </div>
             </div>
-        </div>
+          </div>
         </div>
         <div class="screen-body-item">
           <div class="app-form">
             <div class="app-form-group">
-              <input class="app-form-control" placeholder="NOMBRE" :value="page.text">
+              <input class="app-form-control" placeholder="Nombre" :value="page.text">
             </div>
             <div class="app-form-group">
-              <input class="app-form-control" placeholder="EMAIL">
+              <input class="app-form-control" placeholder="email">
             </div>
             <div class="app-form-group message">
-              <input class="app-form-control" placeholder="MENSAJE">
+              <input class="app-form-control" placeholder="mensaje">
             </div>
             <div class="app-form-group buttons">
-              <button class="app-form-button">CANCELAR</button>
-              <button class="app-form-button">ENVIAR</button>
+              <button class="app-form-button">Cancelar</button>
+              <button class="app-form-button">Enviar</button>
             </div>
           </div>
         </div>
@@ -72,7 +104,7 @@
       </div>
     </b-form>
   </div> -->
-</div>
+  </div>
 </template>
 
 <script>
@@ -88,7 +120,7 @@ export default {
     const contact = WEB.contactInfo
     const page = WEB.pages[currentPage];
 
-    return { currentPage, page, contact}
+    return { currentPage, page, contact }
   },
   methods: {
     getImgFromAssets(img) {
@@ -101,36 +133,43 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
 /* div {
   align-items:center;
 } */
-.form{
-width: 50%;
-align-self: center;
+.form {
+  width: 50%;
+  align-self: center;
 }
-.app-form-button{
-  color:var(--primary)
+
+.app-form-button {
+  color: var(--primary)
 }
+
 h1 {
   align: center;
 }
+
 h3 {
   margin: 40px 0 0;
 }
+
 ul {
   list-style-type: none;
   padding: 0;
 }
+
 li {
   display: inline-block;
   margin: 0 10px;
 }
+
 a {
   color: #42b983;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -141,7 +180,9 @@ body {
   font-size: 12px;
 }
 
-body, button, input {
+body,
+button,
+input {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   letter-spacing: 1.4px;
@@ -163,17 +204,11 @@ body, button, input {
   background: var(--primary);
   border-radius: 15px;
 }
-.screen:after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 20px;
-  right: 20px;
-  bottom: 0;
-  border-radius: 15px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
-  z-index: -1;
+
+.screen {
+
+  box-shadow: 0 1px 8px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
 }
 
 .screen-header {
@@ -250,7 +285,7 @@ body, button, input {
   position: absolute;
   left: 0;
   bottom: -10px;
-  width: 25px;
+  width: 7rem;
   height: 4px;
   background: whitesmoke;
 }
@@ -345,6 +380,5 @@ body, button, input {
     padding: 0;
   }
 }
-
 </style>
 

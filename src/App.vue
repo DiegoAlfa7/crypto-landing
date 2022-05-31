@@ -4,19 +4,20 @@
 
     <b-navbar toggleable="lg" type="dark" style="background-color: var(--primary);">
       <b-navbar-brand href="#" style="margin-left: 30px" :to="'/'">
-        <img :src="getImgFromAssets(web.logo)" width="60"/>
+        <img :src="getImgFromAssets(web.logo)" width="60" />
       </b-navbar-brand>
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
-          <b-nav-item class="display-6" v-bind:active="p == $route.name" :to="'/' + p" v-for="p in Object.keys(web.pages)" :key="p">{{ web.pages[p].title }}</b-nav-item>
+          <b-nav-item style="font-size: 20px;" v-bind:active="p == $route.name" :to="'/' + p"
+            v-for="p in Object.keys(web.pages)" :key="p">{{ web.pages[p].title }}</b-nav-item>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
 
-    <div class="p-3 p-md-5 m-md-3">
+    <div class="mb">
       <router-view></router-view>
     </div>
 
@@ -35,7 +36,7 @@ export default {
   methods: {
     getImgFromAssets(img) {
       var images = require.context('./assets/', false, /\.(gif|jpe?g|tiff?|png|webp|bmp)$/i)
-      return images('./' + img )
+      return images('./' + img)
     }
   }
 }
@@ -45,4 +46,5 @@ export default {
 #app {
   margin: 20px;
 }
+
 </>
