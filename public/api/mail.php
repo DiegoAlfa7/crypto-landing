@@ -69,7 +69,11 @@ $template = str_replace($template, $NAME_RPLC, $name);
 $template = str_replace($template, $EMAIL_RPLC, $email);
 $template = str_replace($template, $MESSAGE_RPLC, $message);
 
-mail($to, $subject, $template);
+$sent = mail($to, $subject, $template);
+
+if(!$sent) {
+    throw new Exception("Mail function returned 'false'. Check smtp configuration.", 1);
+}
 
 } catch (Exception $e) {
     echo json_encode(getResponse(false, $e))

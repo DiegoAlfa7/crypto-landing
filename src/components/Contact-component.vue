@@ -211,6 +211,8 @@ export default {
       } else {
 
         this.form.subject = 'Contacto desde CryptoWorld University - ' + this.form.name;
+        this.form.to = this.web.contactInfo.rss.mailbox;
+
         axios.post("./public/api/mail.php", this.form).then(
           (response) => {
 
