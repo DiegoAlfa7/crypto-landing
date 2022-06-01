@@ -24,7 +24,7 @@
     },
     "courses": {
       "title": "Nuestros Cursos",
-      "content":"Echale un vistazo a nuestro catálogo de cursos.",
+      "content":"Échale un vistazo a nuestro catálogo de cursos.",
       "logo": "courses.png",
       "items": [
         {
@@ -88,7 +88,7 @@
     },
     "contact": {
       "title": "Contacto",
-      "content": "Estaremos encantados de resolver todas tus preguntas desde nuestros distintos canales de contacto",
+      "content": "Información, preguntas, calendario... Estaremos encantados de resolver todas tus preguntas desde nuestros distintos canales de contacto.",
       "form": true
     }
   }
