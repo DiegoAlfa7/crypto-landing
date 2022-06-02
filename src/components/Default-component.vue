@@ -15,14 +15,18 @@
               </b-col>
 
               <b-col cols="4">
-                <b-img style="width: 120px" fluid center v-if="page.logo" :src="getImgFromAssets(page.logo)" :alt="page.title" />
+                <b-img style="width: 120px" fluid center v-if="page.logo" :src="getImgFromAssets(page.logo)"
+                  :alt="page.title" />
               </b-col>
             </b-row>
             <b-row>
-              <b-col>
-                <p class="mb-2 content-text">{{ page.content ? page.content.charAt(0).toUpperCase() +
-                    page.content.slice(1).toLowerCase()
-                    : ''
+              <b-col v-if="page.content && typeof page.content == 'string'">
+                <p class="mb-2 content-text">{{ page.content }}</p>
+              </b-col>
+
+              <b-col v-if="page.content && Array.isArray(page.content)">
+                <p v-for="(paragraph) in page.content" :key="paragraph.substring(10)" class="mb-2 content-text">{{
+                    paragraph
                 }}</p>
               </b-col>
             </b-row>
